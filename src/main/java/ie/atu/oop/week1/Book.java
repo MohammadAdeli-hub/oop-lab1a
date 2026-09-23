@@ -10,6 +10,15 @@ public class Book
     {
 
     }
+    public void displayDetails()
+    {
+        System.out.printf("the book is \n"+title);
+        System.out.println("the author is\n "+author   );
+        System.out.println("the page count is \n"+pageCount);
+        System.out.println("the available is \n"+available);
+
+    }
+
 
 
 }
