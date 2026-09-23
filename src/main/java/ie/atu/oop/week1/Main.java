@@ -10,8 +10,9 @@ public class Main {
         myBook.title = "OOP";
         myBook.author = "Fraklin O Connor";
         myBook.pageCount= 412;
-        myBook.available = true;
+        myBook.available = false;
         myBook.displayDetails();
+        myBook.borrowBook();
 
 
         Book myBook2 = new Book();
@@ -20,6 +21,7 @@ public class Main {
         myBook2.pageCount = 221;
         myBook2.available = true;
         myBook2.displayDetails();
+        myBook2.borrowBook();
 
 
 

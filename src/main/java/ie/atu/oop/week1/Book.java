@@ -18,6 +18,19 @@ public class Book
         System.out.println("the available is \n"+available);
 
     }
+    public void borrowBook()
+    {
+        if (available)
+        {
+            available = false;
+            System.out.printf("the book has been borrowed\n");
+
+        }
+        else
+        {
+            System.out.println("is already borrowed");
+        }
+    }
 
 
 
