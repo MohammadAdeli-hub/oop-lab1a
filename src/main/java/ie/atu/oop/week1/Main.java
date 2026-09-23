@@ -6,24 +6,35 @@ public class Main {
     public static void main(String[] args)
     {
         System.out.println("hellow oop");
-        Book myBook = new Book();
-        myBook.title = "OOP";
-        myBook.author = "Fraklin O Connor";
-        myBook.pageCount= 412;
-        myBook.available = false;
-        myBook.displayDetails();
-        myBook.borrowBook();
+        Book myBook1 = new Book();
+        myBook1.title = "OOP";
+        myBook1.author = "Franklin O Connor";
+        myBook1.pageCount= 412;
+        myBook1.available = false;
 
 
-        Book myBook2 = new Book();
-        myBook2.title = "the little programmer";
-        myBook2.author = "Jake Hooper";
-        myBook2.pageCount = 221;
-        myBook2.available = true;
+        Book myBook2 = createBook("little programmer","Jake Hooper",221);
+        Book myBook3 = createBook("Java ","Jamal Singh",211);
+        Book myBook4 = createBook("programmers life ","Fion Joyce",222);
+        myBook1.displayDetails();
         myBook2.displayDetails();
+        myBook3.displayDetails();
+        myBook4.displayDetails();
+        myBook1.borrowBook();
         myBook2.borrowBook();
+        myBook1.displayDetails();
 
 
+
+
+    }
+    private static Book createBook(String title, String author, int pageCount)
+    {
+        Book myBook = new Book();
+        myBook.title = title;
+        myBook.author = author;
+        myBook.pageCount = pageCount;
+        return myBook;
 
     }
 }

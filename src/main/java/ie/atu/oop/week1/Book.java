@@ -13,9 +13,9 @@ public class Book
     public void displayDetails()
     {
         System.out.printf("the book is \n"+title);
-        System.out.println("the author is\n "+author   );
-        System.out.println("the page count is \n"+pageCount);
-        System.out.println("the available is \n"+available);
+        System.out.println("the author is"+author   );
+        System.out.println("the page count is "+pageCount);
+        System.out.println("book available \n"+available);
 
     }
     public void borrowBook()
@@ -28,7 +28,7 @@ public class Book
         }
         else
         {
-            System.out.println("is already borrowed");
+            System.out.printf("is already borrowed\n");
         }
     }
 
