@@ -7,7 +7,7 @@ public class Main
     public static void main(String[] args)
     {
         try {
-            Book myBook = new Book("Coding Java","Rustem", 11);
+            Book myBook = new Book("Coding Java","Rustem", 443);
             System.out.println("Creating new book");
         } catch (IllegalArgumentException ex)
         {
