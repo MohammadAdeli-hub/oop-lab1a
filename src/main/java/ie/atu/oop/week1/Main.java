@@ -9,6 +9,9 @@ public class Main
         try {
             Book myBook = new Book("Coding Java","Rustem", 443);
             System.out.println("Creating new book");
+            System.out.println(myBook.getStatus());
+            myBook.BorrowBook();
+            System.out.println(myBook.getStatus());
         } catch (IllegalArgumentException ex)
         {
             System.out.println(ex.getMessage());
