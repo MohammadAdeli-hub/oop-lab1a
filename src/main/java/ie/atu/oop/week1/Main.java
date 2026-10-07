@@ -1,28 +1,24 @@
 package ie.atu.oop.week1;
 
+import java.util.ArrayList;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main
 {
     public static void main(String[] args)
     {
-        try {
-            Book myBook = new Book("Coding Java","Rustem", 443);
-            LibraryService service = new LibraryService();
-
-            System.out.println("Creating new book");
-            System.out.println(myBook.getStatus());
-            myBook.BorrowBook();
-            System.out.println(myBook.getStatus());
-            myBook.ReturnBook();
-            System.out.println(myBook.getStatus());
-
-            service.LoanBook(myBook,12);
-            System.out.println(myBook.getStatus());
-
-        } catch (IllegalArgumentException ex)
+        Book dune = new Book("Dune", "Frank Hebert",223);
+        Book JavaCode =new Book("Java Code", "David Harrison",234);
+        Book Soccer= new Book("Soccer", "Cristiano Ronaldo",434);
+        LibraryService service = new LibraryService();
+        service.addBook(dune);
+        service.addBook(JavaCode);
+        service.addBook(Soccer);
+        System.out.println("Books:"+ service.getBookCount());
+        for (Book book : service.getAllBooks())
         {
-            System.out.println(ex.getMessage());
+            System.out.println(book.getTitle());
         }
     }
 }
