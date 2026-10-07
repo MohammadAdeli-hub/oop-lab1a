@@ -20,5 +20,17 @@ public class Main
         {
             System.out.println(book.getTitle());
         }
+        //Checking if the is Found
+        Book found = service.findBookByTitle("Dune");
+        if (found!=null)
+        {
+            System.out.println("Found Book:"+ found.getTitle());
+            //checks for missing title
+        }
+        Book missing = service.findBookByTitle("FootBall");
+        if (missing!=null)
+        {
+            System.out.println("The Book has not been found");
+        }
     }
 }
