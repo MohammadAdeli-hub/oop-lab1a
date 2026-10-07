@@ -8,10 +8,18 @@ public class Main
     {
         try {
             Book myBook = new Book("Coding Java","Rustem", 443);
+            LibraryService service = new LibraryService();
+
             System.out.println("Creating new book");
             System.out.println(myBook.getStatus());
             myBook.BorrowBook();
             System.out.println(myBook.getStatus());
+            myBook.ReturnBook();
+            System.out.println(myBook.getStatus());
+
+            service.LoanBook(myBook,12);
+            System.out.println(myBook.getStatus());
+
         } catch (IllegalArgumentException ex)
         {
             System.out.println(ex.getMessage());

@@ -5,7 +5,7 @@ public class Book
         private final String title;
         private final String author;
         private final int pages;
-        private BookStatus status;
+        private static BookStatus status;
 
         public Book(String title, String author, int pages)
         {
@@ -44,14 +44,21 @@ public class Book
     public BookStatus getStatus() {
         return status;
     }
-    public void BorrowBook()
+    public static void BorrowBook()
     {
         if (status == BookStatus.ON_LOAN)
         {
             throw new IllegalStateException("The selected Book is on Loan");
         }
         status = BookStatus.ON_LOAN;
-
+    }
+    public static void ReturnBook()
+    {
+        if (status==BookStatus.AVAILABLE)
+        {
+            throw new IllegalStateException("The Book is returned");
+        }
+        status =BookStatus.AVAILABLE;
     }
 }
 
