@@ -2,10 +2,27 @@ package ie.atu.oop.week1;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
+public class Main
+{
     public static void main(String[] args)
     {
-        System.out.println("hellow oop");
+        try {
+            Book myBook = new Book("Coding Java","Rustem", 443);
+            LibraryService service = new LibraryService();
 
+            System.out.println("Creating new book");
+            System.out.println(myBook.getStatus());
+            myBook.BorrowBook();
+            System.out.println(myBook.getStatus());
+            myBook.ReturnBook();
+            System.out.println(myBook.getStatus());
+
+            service.LoanBook(myBook,12);
+            System.out.println(myBook.getStatus());
+
+        } catch (IllegalArgumentException ex)
+        {
+            System.out.println(ex.getMessage());
+        }
     }
 }
